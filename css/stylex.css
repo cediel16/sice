@@ -1,0 +1,146 @@
+/* 
+    Document   : style.c
+    Created on : 06/02/2013, 08:23:46 PM
+    Author     : johel
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+
+html,body{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:10px;
+    margin:0px;
+    padding:0px;
+}
+
+a{
+    text-decoration: none;
+}
+
+input[type=text]{
+    border:1px solid #aaaaaa;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    padding:5px;
+    width: 100%;
+    
+}
+
+/* Jquery ui */
+.noclose .ui-dialog-titlebar-close{
+    display:none;
+}
+
+.ui-messaje{
+    margin-bottom:5px;
+}
+
+.ui-widget .ui-state-error,
+.ui-widget .ui-state-highlight{
+    padding: 6px;
+    font-weight:bold;
+}
+
+.ui-widget .ui-state-error .ui-icon,
+.ui-widget .ui-state-highlight .ui-icon{
+    float: left; margin:-2px 5px 0px 0px;
+}
+/* Jquery ui */
+
+header{
+    min-width: 1100px;
+}
+
+header .header-sup ul{
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+header .header-sup .li-logo{
+    font-size:12px;
+    float:left;
+    margin-top:4px;
+    margin-left:5px;
+}
+
+header .header-sup .li-usr{
+    font-size:12px;
+    float:right;
+}
+
+header .header-sup .li-usr span{
+    margin-top:10px;
+    padding-right:10px;
+    display:block;
+    float:left;
+}
+
+section{
+    border:0px solid red;
+    width: 100%;
+    margin:10px auto;
+    display:table;
+    width: 1100px;
+}
+
+aside{
+    width: 10%;
+    border:0px solid green;
+    float:left;
+}
+
+article{
+    border:1px solid blue;
+    float:left;
+    min-height:300px;
+    width: 960px;
+    margin-left:10px;
+    padding:5px;
+}
+
+article .title{
+    font-weight: bold;
+    font-size:12px;
+    border-bottom:1px solid #AAAAAA;
+    padding:0px 5px 4px 5px;
+    margin-bottom:6px;
+}
+
+.keypad{
+    clear: both;
+    padding-top:5px;
+    text-align: right;
+    border-top:1px solid #aaaaaa;
+
+}
+
+.form_container{
+    border:0px solid red;
+    float: left;
+    display: inline;
+    margin-bottom:20px;
+    width: 100%;
+}
+
+.form_container .bar-side{
+    border:1px solid #aaaaaa;
+    float:left;
+    width:150px;
+}
+
+.form_container .bar-side img{
+    display: block;
+    padding:0px;
+    margin:0px;
+    border-radius: 3px;
+}
+
+.form_container .content{
+    float: right;
+    border:0px solid green;
+    width: 800px;
+    min-height: 250px;
+}
+

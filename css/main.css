@@ -1,0 +1,279 @@
+/* 
+    Document   : style
+    Created on : 24/02/2013, 08:12:23 AM
+    Author     : johel
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+/* Jquery ui */
+.noclose .ui-dialog-titlebar-close{
+    display:none;
+}
+
+.ui-messaje{
+    margin-bottom:5px;
+}
+
+.ui-widget .ui-state-error,
+.ui-widget .ui-state-highlight{
+    padding: 6px;
+    font-weight:bold;
+}
+
+.ui-widget .ui-state-error .ui-icon,
+.ui-widget .ui-state-highlight .ui-icon{
+    float: left; margin:-2px 5px 0px 0px;
+}
+/* Jquery ui */
+
+root { 
+    display: block;
+}
+
+html,
+body{
+    padding: 0px;
+    margin: 0px;
+    font-family: arial,sans;
+    font-size: 12px;    
+}
+
+a{
+    text-decoration: none;
+}
+
+fieldset{
+   border:1px solid #AAAAAA;
+   border-radius: 5px;
+   padding:10px;
+}
+
+body{
+    background: #1E2D51;
+}
+
+input[type="text"],
+input[type="password"]{
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    -moz-box-sizing: border-box;
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-color: #C0C0C0 #D9D9D9 #D9D9D9;
+    border-image: none;
+    border-radius: 2px;
+    border-right: 1px solid #D9D9D9;
+    border-style: solid;
+    border-width: 1px;
+    display: inline-block;
+    height: 29px;
+    margin: 0;
+    padding: 0 8px;
+}
+
+header .up-header{
+    background: url('../img/bg_header.png');
+}
+
+header .up-header .content{
+    height: 50px;
+    padding: 15px 0px 0px 0px;
+    margin: auto;    
+    width: 980px;
+}
+
+
+header section.up-header .name-institution{
+    float:left;
+    padding:3px 3px 3px 0px;
+    color: #ffffff;
+    font-weight: bold;
+    font-size:14px;
+}
+
+header section.up-header nav.option{
+    float: right;
+}
+
+
+header section.up-header nav.option ul{
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+}
+
+header section.up-header nav.option ul li{
+    float:left;
+    padding: 0px;
+    margin: 0px 0px 0px 10px;    
+}
+
+header section.up-header nav.option ul li a{
+    display: block;
+    border:0px solid red;
+    padding:3px 3px 3px 20px;
+    color:#bbbbbb;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+header section.up-header nav.option ul li a:hover{
+    color:#ffffff;
+    background:blue;
+}
+
+/*
+header section.up-header nav.option ul li.msj a{
+    background:url("img/msj.png") no-repeat scroll left center;
+}
+
+header section.up-header nav.option ul li.usr a{
+    background:url("img/usr.png") no-repeat scroll left center;
+}
+
+header section.up-header nav.option ul li.logout a{
+    background:url("img/logout.png") no-repeat scroll left center;
+}
+*/
+
+header section.low-header{
+    background: #333333;
+}
+
+header section.low-header .content{
+    height: 38px;
+    margin: auto;
+    width: 980px;
+}
+
+header section.low-header .search{
+    float:right;
+}
+
+header section.low-header .search input[type=text]{
+    margin:5px 0px 0px 5px;
+}
+
+.container{
+    background: #F2F2F2;
+}
+
+.container .content{
+    margin: auto;    
+    width: 980px;
+    min-height: 400px;
+    padding:10px 0px 10px 0px;
+}
+
+.container .content .content-header{
+    border-bottom:1px solid #aaaaaa;
+    padding:0px 0px 5px 0px;
+    margin:0px 0px 10px 0px;
+    height:20px;
+}
+
+
+.container .content .content-header .title{
+    float:left;
+    font-size:20px;
+}
+
+
+.conteiner-add-representantes{
+    float: left;
+    display: inline;
+    margin-bottom:20px;
+    width: 100%;
+}
+
+.conteiner-add-representantes .bar-side{
+    margin-top:6px; 
+    float:left;
+}
+
+.conteiner-add-representantes .bar-side .profile-picture{
+    border:1px solid #aaaaaa;
+    width:150px;
+    height:200px;
+}
+
+.conteiner-add-representantes .bar-side .load-picture{
+    float:right;
+    font-size:12px;
+    border:0px solid red;
+    margin-top:3px;
+    margin-right:5px;
+}
+
+
+.conteiner-add-representantes .bar-side img{
+    display: block;
+    padding:0px;
+    margin:0px;
+    border-radius: 3px;
+}
+
+.conteiner-add-representantes .sub-content{
+    float: right;
+    border:0px solid green;
+    width: 800px;
+    min-height: 250px;
+}
+
+.keypad{
+    clear: both;
+    padding-top:5px;
+    text-align: right;
+    border-top:1px solid #aaaaaa;
+
+}
+
+.table-form td{
+    padding:3px;
+    vertical-align:middle;
+}
+
+.form-msj-error{
+    float:right;
+    border:0px solid #A30000;
+    display:inline-block;
+    width:350px;
+    padding:3px 5px 3px 5px;
+    margin-left:12px;
+    margin-top:4px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    color:#A30000;
+}
+
+.question{
+   border-radius: 5px;
+   -webkit-border-radius: 5px;
+   height: 40px;
+   margin-bottom:10px;
+   background:#DFDFDF;
+}
+
+.question .msj-question{
+    float:left;
+    border:0px solid blue;
+    margin:12px 5px 0px 8px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.question .keypad-question{
+    float:right;
+    padding:5px;
+}
+
+footer{
+    
+}
