@@ -3,7 +3,7 @@
 if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 
-class Representantes extends MY_Controller {
+class Admin extends MY_Controller {
 
     function __construct() {
         parent::__construct();
@@ -12,15 +12,12 @@ class Representantes extends MY_Controller {
     }
 
     public function index() {
-        $data['rows'] = $this->Representantes_model->list_rows($this->input->post('buscar'));
-        $data['message'] = ($this->session->flashdata('message') == '') ? '' : $this->session->flashdata('message');
 
-        $data['title'] = anchor('representantes', 'Representantes');
-        $data['sub_menu'] = array(
-            anchor('representantes/add', 'Nuevo representante')
-        );
-        $this->data['content'] = $this->load->view('representantes/index', $data, TRUE);
-        $this->load->view('tpl/main', $this->data);
+        if (!$this->auth->is_logged_in()) {
+            redirect('main/login');
+        }
+        
+        $this->load->view('admin/index', $this->data);
     }
 
     public function add() {

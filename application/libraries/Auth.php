@@ -12,23 +12,38 @@ class Auth {
         $this->CI->load->database();
     }
 
-    function login($usr, $clv,$grp) {
-        $this->CI->db->select('id,usuario,status,acceso,grupo,grupo_fkey');
-        $this->CI->db->from('usuarios');
-        $this->CI->db->where('usuario', $usr);
+    function login($usr, $clv, $grp) {
+        $this->CI->db->select("
+            id,
+            primer_nombre || ' ' || primer_apellido as nombre,
+            status
+        ");
+        $this->CI->db->from($grp);
+        $this->CI->db->where('email', $usr);
         $this->CI->db->where('clave', md5($clv));
         $rst = $this->CI->db->get();
         if ($rst->num_rows == 1) {
-            $usr = $rst->row_array();
-            $this->CI->db->select("
-                    cedula,
-                    primer_nombre || ' ' || primer_apellido as nombre,
-                    status as status_grupo
-            ");
-            $this->CI->db->from($usr['grupo']);
-            $this->CI->db->where('id', $usr['grupo_fkey']);
-            $rst = $this->CI->db->get();
-            //$this->CI->session->set_userdata($rst->row_array());
+            $this->CI->session->set_userdata($rst->row_array());
+            return TRUE;
+        } else {
+            return FALSE;
+        }
+    }
+
+        function adminlogin($usr, $clv) {
+        $this->CI->db->select("
+            id,
+            primer_nombre || ' ' || primer_apellido as nombre,
+            status
+        ");
+        $this->CI->db->from('administradores');
+        $this->CI->db->where('email', $usr);
+        $this->CI->db->where('clave', md5($clv));
+        $this->CI->db->where('status', 'activo');
+        $rst = $this->CI->db->get();
+        print_r($this->CI->db->last_query());
+        if ($rst->num_rows == 1) {
+            $this->CI->session->set_userdata($rst->row_array());
             return TRUE;
         } else {
             return FALSE;
@@ -67,13 +82,15 @@ class Auth {
     }
 
     function set_userdata() {
-        $this->CI->db->select('id,usuario,status,acceso');
-        $this->CI->db->from('usuarios');
-        $this->CI->db->where('id', $this->CI->session->userdata('id'));
-        $rst = $this->CI->db->get();
-        if ($rst->num_rows == 1) {
-            $this->CI->session->set_userdata($rst->row_array());
-        }
+        /*
+          $this->CI->db->select('id,usuario,status,acceso');
+          $this->CI->db->from('usuarios');
+          $this->CI->db->where('id', $this->CI->session->userdata('id'));
+          $rst = $this->CI->db->get();
+          if ($rst->num_rows == 1) {
+          $this->CI->session->set_userdata($rst->row_array());
+          }
+         */
     }
 
     function get_random_pass() {

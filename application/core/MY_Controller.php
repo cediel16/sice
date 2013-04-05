@@ -10,6 +10,7 @@ class MY_Controller extends CI_Controller {
         $this->data=array(
             'script'=>'',
             'title'=>'title undefined',
+            'submenu'=>'',
             'content'=>'',
             'username'=>$this->session->userdata("usuario")
         );

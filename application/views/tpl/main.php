@@ -19,7 +19,7 @@
                     <div class="pull-left name-institution">Nombre de la institución</div>
                     <div class="btn-group pull-right">
                         <?php echo anchor('#', '<i class="icon-envelope"></i>Mensajes (0)', 'class="btn btn-small"') ?>
-                        <?php echo anchor('#', '<i class="icon-user"></i>', 'class="btn btn-small dropdown-toggle" data-toggle="dropdown"') ?>    
+                        <?php echo anchor('#', $this->session->userdata('nombre') . '<i class="icon-user"></i>', 'class="btn btn-small dropdown-toggle" data-toggle="dropdown"') ?>    
                         <ul class="dropdown-menu">
                             <li class="divider"></li>
                             <li><?php echo anchor('main/logout', '<i class=""></i>Cerrar sesión') ?></li>
@@ -33,13 +33,17 @@
         </header>
         <section class="container">
             <div class="content">
+                <div class="content-header">
+                    <div class="title pull-left"><?php echo $title ?></div>
+                    <div class="pull-right">
+                        <?php echo $submenu ?>
+                    </div>
+                </div>
                 <?php echo $content ?>
             </div>
         </section>
         <footer>
-            <pre>
-                <?php print_r($this->session->all_userdata()) ?>
-            </pre>
+                <?php //print_r($this->session->all_userdata()) ?>
         </footer>
     </body>
 </html>
