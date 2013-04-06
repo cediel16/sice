@@ -23,13 +23,9 @@ class Main extends MY_Controller {
     }
 
     public function index() {
-        if (!$this->auth->is_logged_in()) {
-            redirect('main/login');
-        } else {
-            $this->data['title'] = 'Inicio';
-            $this->data['content'] = $this->load->view('tpl/inicio', '', TRUE);
-            $this->load->view('tpl/main', $this->data);
-        }
+//            $this->data['title'] = 'Inicio';
+//            $this->data['content'] = $this->load->view('tpl/inicio', '', TRUE);
+            $this->load->view('base', $this->data);
     }
 
     public function login() {

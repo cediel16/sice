@@ -7258,3 +7258,123 @@ DEBUG - 2013-04-04 22:43:07 --> File loaded: application/views/roles/index.php
 DEBUG - 2013-04-04 22:43:07 --> File loaded: application/views/tpl/main.php
 DEBUG - 2013-04-04 22:43:07 --> Final output sent to browser
 DEBUG - 2013-04-04 22:43:07 --> Total execution time: 0.0578
+DEBUG - 2013-04-04 22:48:40 --> Config Class Initialized
+DEBUG - 2013-04-04 22:48:40 --> Hooks Class Initialized
+DEBUG - 2013-04-04 22:48:40 --> Utf8 Class Initialized
+DEBUG - 2013-04-04 22:48:40 --> UTF-8 Support Enabled
+DEBUG - 2013-04-04 22:48:40 --> URI Class Initialized
+DEBUG - 2013-04-04 22:48:40 --> Router Class Initialized
+DEBUG - 2013-04-04 22:48:40 --> Output Class Initialized
+DEBUG - 2013-04-04 22:48:40 --> Security Class Initialized
+DEBUG - 2013-04-04 22:48:40 --> Input Class Initialized
+DEBUG - 2013-04-04 22:48:40 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-04-04 22:48:40 --> Language Class Initialized
+DEBUG - 2013-04-04 22:48:40 --> Loader Class Initialized
+DEBUG - 2013-04-04 22:48:40 --> Helper loaded: form_helper
+DEBUG - 2013-04-04 22:48:40 --> Helper loaded: html_helper
+DEBUG - 2013-04-04 22:48:40 --> Helper loaded: url_helper
+DEBUG - 2013-04-04 22:48:40 --> Helper loaded: validation_helper
+DEBUG - 2013-04-04 22:48:40 --> Database Driver Class Initialized
+DEBUG - 2013-04-04 22:48:40 --> Session Class Initialized
+DEBUG - 2013-04-04 22:48:40 --> Helper loaded: string_helper
+DEBUG - 2013-04-04 22:48:40 --> Encrypt Class Initialized
+DEBUG - 2013-04-04 22:48:40 --> Session routines successfully run
+DEBUG - 2013-04-04 22:48:40 --> Config file loaded: application/config/auth.php
+DEBUG - 2013-04-04 22:48:40 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2013-04-04 22:48:40 --> Form Validation Class Initialized
+DEBUG - 2013-04-04 22:48:40 --> Email Class Initialized
+DEBUG - 2013-04-04 22:48:40 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2013-04-04 22:48:40 --> Controller Class Initialized
+DEBUG - 2013-04-04 22:48:40 --> Model Class Initialized
+DEBUG - 2013-04-04 22:48:40 --> Model Class Initialized
+DEBUG - 2013-04-04 22:48:40 --> File loaded: application/views/roles/index.php
+DEBUG - 2013-04-04 22:48:40 --> File loaded: application/views/tpl/main.php
+DEBUG - 2013-04-04 22:48:40 --> Final output sent to browser
+DEBUG - 2013-04-04 22:48:40 --> Total execution time: 0.1183
+DEBUG - 2013-04-04 22:48:53 --> Config Class Initialized
+DEBUG - 2013-04-04 22:48:53 --> Hooks Class Initialized
+DEBUG - 2013-04-04 22:48:53 --> Utf8 Class Initialized
+DEBUG - 2013-04-04 22:48:53 --> UTF-8 Support Enabled
+DEBUG - 2013-04-04 22:48:53 --> URI Class Initialized
+DEBUG - 2013-04-04 22:48:53 --> Router Class Initialized
+DEBUG - 2013-04-04 22:48:53 --> Output Class Initialized
+DEBUG - 2013-04-04 22:48:53 --> Security Class Initialized
+DEBUG - 2013-04-04 22:48:53 --> Input Class Initialized
+DEBUG - 2013-04-04 22:48:53 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-04-04 22:48:53 --> Language Class Initialized
+DEBUG - 2013-04-04 22:48:53 --> Loader Class Initialized
+DEBUG - 2013-04-04 22:48:53 --> Helper loaded: form_helper
+DEBUG - 2013-04-04 22:48:53 --> Helper loaded: html_helper
+DEBUG - 2013-04-04 22:48:53 --> Helper loaded: url_helper
+DEBUG - 2013-04-04 22:48:53 --> Helper loaded: validation_helper
+DEBUG - 2013-04-04 22:48:53 --> Database Driver Class Initialized
+DEBUG - 2013-04-04 22:48:53 --> Session Class Initialized
+DEBUG - 2013-04-04 22:48:53 --> Helper loaded: string_helper
+DEBUG - 2013-04-04 22:48:53 --> Encrypt Class Initialized
+DEBUG - 2013-04-04 22:48:54 --> Session garbage collection performed.
+DEBUG - 2013-04-04 22:48:54 --> Session routines successfully run
+DEBUG - 2013-04-04 22:48:54 --> Config file loaded: application/config/auth.php
+DEBUG - 2013-04-04 22:48:54 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2013-04-04 22:48:54 --> Form Validation Class Initialized
+DEBUG - 2013-04-04 22:48:54 --> Email Class Initialized
+DEBUG - 2013-04-04 22:48:54 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2013-04-04 22:48:54 --> Controller Class Initialized
+DEBUG - 2013-04-04 22:48:54 --> Config Class Initialized
+DEBUG - 2013-04-04 22:48:54 --> Hooks Class Initialized
+DEBUG - 2013-04-04 22:48:54 --> Utf8 Class Initialized
+DEBUG - 2013-04-04 22:48:54 --> UTF-8 Support Enabled
+DEBUG - 2013-04-04 22:48:54 --> URI Class Initialized
+DEBUG - 2013-04-04 22:48:54 --> Router Class Initialized
+DEBUG - 2013-04-04 22:48:54 --> No URI present. Default controller set.
+DEBUG - 2013-04-04 22:48:54 --> Output Class Initialized
+DEBUG - 2013-04-04 22:48:54 --> Security Class Initialized
+DEBUG - 2013-04-04 22:48:54 --> Input Class Initialized
+DEBUG - 2013-04-04 22:48:54 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-04-04 22:48:54 --> Language Class Initialized
+DEBUG - 2013-04-04 22:48:54 --> Loader Class Initialized
+DEBUG - 2013-04-04 22:48:54 --> Helper loaded: form_helper
+DEBUG - 2013-04-04 22:48:54 --> Helper loaded: html_helper
+DEBUG - 2013-04-04 22:48:54 --> Helper loaded: url_helper
+DEBUG - 2013-04-04 22:48:54 --> Helper loaded: validation_helper
+DEBUG - 2013-04-04 22:48:54 --> Database Driver Class Initialized
+DEBUG - 2013-04-04 22:48:54 --> Session Class Initialized
+DEBUG - 2013-04-04 22:48:54 --> Helper loaded: string_helper
+DEBUG - 2013-04-04 22:48:54 --> Encrypt Class Initialized
+DEBUG - 2013-04-04 22:48:54 --> A session cookie was not found.
+DEBUG - 2013-04-04 22:48:55 --> Session routines successfully run
+DEBUG - 2013-04-04 22:48:55 --> Config file loaded: application/config/auth.php
+DEBUG - 2013-04-04 22:48:55 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2013-04-04 22:48:55 --> Form Validation Class Initialized
+DEBUG - 2013-04-04 22:48:55 --> Email Class Initialized
+DEBUG - 2013-04-04 22:48:55 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2013-04-04 22:48:55 --> Controller Class Initialized
+DEBUG - 2013-04-04 22:48:55 --> Config Class Initialized
+DEBUG - 2013-04-04 22:48:55 --> Hooks Class Initialized
+DEBUG - 2013-04-04 22:48:55 --> Utf8 Class Initialized
+DEBUG - 2013-04-04 22:48:55 --> UTF-8 Support Enabled
+DEBUG - 2013-04-04 22:48:55 --> URI Class Initialized
+DEBUG - 2013-04-04 22:48:55 --> Router Class Initialized
+DEBUG - 2013-04-04 22:48:55 --> Output Class Initialized
+DEBUG - 2013-04-04 22:48:55 --> Security Class Initialized
+DEBUG - 2013-04-04 22:48:55 --> Input Class Initialized
+DEBUG - 2013-04-04 22:48:55 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-04-04 22:48:55 --> Language Class Initialized
+DEBUG - 2013-04-04 22:48:55 --> Loader Class Initialized
+DEBUG - 2013-04-04 22:48:55 --> Helper loaded: form_helper
+DEBUG - 2013-04-04 22:48:55 --> Helper loaded: html_helper
+DEBUG - 2013-04-04 22:48:55 --> Helper loaded: url_helper
+DEBUG - 2013-04-04 22:48:55 --> Helper loaded: validation_helper
+DEBUG - 2013-04-04 22:48:55 --> Database Driver Class Initialized
+DEBUG - 2013-04-04 22:48:55 --> Session Class Initialized
+DEBUG - 2013-04-04 22:48:55 --> Helper loaded: string_helper
+DEBUG - 2013-04-04 22:48:55 --> Encrypt Class Initialized
+DEBUG - 2013-04-04 22:48:55 --> Session routines successfully run
+DEBUG - 2013-04-04 22:48:55 --> Config file loaded: application/config/auth.php
+DEBUG - 2013-04-04 22:48:55 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2013-04-04 22:48:55 --> Form Validation Class Initialized
+DEBUG - 2013-04-04 22:48:55 --> Email Class Initialized
+DEBUG - 2013-04-04 22:48:55 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2013-04-04 22:48:55 --> Controller Class Initialized
+DEBUG - 2013-04-04 22:48:55 --> File loaded: application/views/login.php
+DEBUG - 2013-04-04 22:48:55 --> Final output sent to browser
+DEBUG - 2013-04-04 22:48:55 --> Total execution time: 0.1033
