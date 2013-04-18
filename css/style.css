@@ -1,10 +1,157 @@
-@import "common.css";
-@import "header.css";
+html,body{
+    margin:0px;
+    padding:0px;
+}
+
+.main-content{
+    padding:10px;
+    min-height: 400px;
+}
+
+.banner {
+    background: #1E2D51;
+    font-size: 12px;
+    min-height: 80px;
+    position: relative;
+    z-index: 1000;
+}
+
+.banner .banner-ul{
+    padding: 0px;
+    margin:0px;
+    list-style-type: none;
+}
+
+.banner .logo,
+.banner .perfil{
+    margin: 16px 19px;
+}
+
+.banner .perfil{
+    margin: 16px 28px;
+}
 
 
-/*
-@import "main.css";
-@import "main-menu.css";
-@import "sub-menu.css";
-@import "list-index.css";
-*/
+.banner-perfil{
+    height: 48px;
+}
+
+
+.banner .logo{
+    background:url('../img/logo_header.png') no-repeat center;
+    height: 48px;
+    width: 247px;
+}
+
+.main-menu .brand{
+    display: none;
+}
+
+.navbar .navbar-inner{
+    border-radius: 0px;
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 0px;
+}
+
+footer {
+    background-color: #264269;
+    /*background-image: url("../img/bg_footer.png");*/
+    background-repeat: repeat-x;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.navbar{
+    margin: 0px;
+}
+
+
+
+
+@media all and (max-width: 760px) {
+    .span-info{
+        display:none;
+    }
+
+    .breadcrumb li:last-child{
+        display:block;
+    }
+}
+
+@media all and (max-width: 760px) {
+    .span-info{
+        display:none;
+    }
+
+    .breadcrumb li:last-child{
+        display:block;
+    }
+}
+
+
+@media all and (max-width: 1000px) {
+    .main-menu .brand{
+        display: block;
+    }
+}
+
+#trailbox {
+    background-color: #F2F2F2;
+    border-bottom: 1px solid #DCDCDC;
+    border-top: 1px solid white;
+    clear: both;
+    color: #444444;
+    height: 26px;
+    left: 0;
+    margin-bottom: 10px;
+    padding: 0 1%;
+    position: relative;
+    right: 0;
+}
+
+#trailbox ul, #breadcrumbtrail li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#breadcrumbtrail {
+    float: left;
+    height: 26px;
+    overflow: hidden;
+}
+
+#breadcrumbtrail li {
+    color: #777777;
+    float: left;
+    line-height: 26px;
+    padding-left: 10px;
+}
+
+
+#trailbox2 ul, #breadcrumbtrail li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#breadcrumbtrail li a {
+    background: url("../img/bg_breadcrumb.png") no-repeat scroll right center transparent;
+    color: #444444;
+    display: block;
+    padding: 0 15px 0 0;
+    font-size:12px;
+}
+
+#breadcrumbtrail li a:link {
+    color: #4171B5;
+    font-weight: bold;
+    outline: medium none;
+    text-decoration: none;
+}
+
+.dropdown-menu-user{
+    border-top-right-radius: 0px;
+    border:none;
+}
+

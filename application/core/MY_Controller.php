@@ -1,18 +1,22 @@
-<?php if (!defined('BASEPATH')) exit('No deseo permitir acceso directo a este script');
+<?php
+
+if (!defined('BASEPATH'))
+    exit('No deseo permitir acceso directo a este script');
 
 class MY_Controller extends CI_Controller {
 
     protected $data;
-    
+
     function __construct() {
         parent::__construct();
         $this->auth->set_userdata();
-        $this->data=array(
-            'script'=>'',
-            'title'=>'title undefined',
-            'submenu'=>'',
-            'content'=>'',
-            'username'=>$this->session->userdata("usuario")
+        $this->data = array(
+            'tpl_menu' => $this->load->view('menu', '', TRUE),
+            'tpl_content' => '',
+            'script' => '',
+            'title' => 'title undefined',
+            'submenu' => '',
+            'username' => $this->session->userdata("usuario")
         );
     }
 

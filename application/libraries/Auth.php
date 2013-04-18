@@ -13,24 +13,31 @@ class Auth {
     }
 
     function login($usr, $clv, $grp) {
-        $this->CI->db->select("
-            id,
-            primer_nombre || ' ' || primer_apellido as nombre,
-            status
-        ");
-        $this->CI->db->from($grp);
-        $this->CI->db->where('email', $usr);
-        $this->CI->db->where('clave', md5($clv));
-        $rst = $this->CI->db->get();
-        if ($rst->num_rows == 1) {
-            $this->CI->session->set_userdata($rst->row_array());
-            return TRUE;
-        } else {
-            return FALSE;
+        switch ($grp) {
+            //case $this->CI->config->item('doc'):
+            //case $this->CI->config->item('alu'):
+            case $this->CI->config->item('rep'): {
+                    $this->CI->db->select("
+                    id,
+                    primer_nombre || ' ' || primer_apellido as nombre,
+                    status
+                ");
+                    $this->CI->db->from($grp);
+                    $this->CI->db->where('email', $usr);
+                    $this->CI->db->where('clave', md5($clv));
+                    $rst = $this->CI->db->get();
+                    if ($rst->num_rows == 1) {
+                        $this->CI->session->set_userdata($rst->row_array());
+                        return TRUE;
+                    } else {
+                        return FALSE;
+                    }
+                }
+            default : return FALSE;
         }
     }
 
-        function adminlogin($usr, $clv) {
+    function adminlogin($usr, $clv) {
         $this->CI->db->select("
             id,
             primer_nombre || ' ' || primer_apellido as nombre,
@@ -109,5 +116,7 @@ class Auth {
 
 // END Auth class
 
-/* End of file Auth.php */
-/* Location: ./application/libraries/Auth.php */
+    /* End of file Auth.php */
+    /* Location: ./application/libraries/Auth.php */
+
+    

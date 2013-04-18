@@ -1,0 +1,77 @@
+/* 
+    Document   : login
+    Created on : 13/04/2013, 12:07:18 AM
+    Author     : johel
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+html,body{
+    margin:0px;
+    padding:0px;
+
+}
+
+
+.banner {
+    background: #1E2D51 url("../img/bg_header.png") repeat-x left bottom;
+    font-size: 12px;
+    min-height: 80px;
+    position: relative;
+    z-index: 1000;
+}
+
+.banner ul{
+    padding: 0px;
+    margin:0px;
+    list-style-type: none;
+}
+
+
+.banner .logo{
+    margin: 16px 19px;
+    background:url('../img/logo_header.png') no-repeat center;
+    height: 48px;
+    width: 247px;
+}
+
+
+footer {
+    background-color: #264269;
+    background-image: url("../img/bg_footer.png");
+    background-repeat: repeat-x;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.main-content{
+    padding:10px;
+    min-height: 400px;
+}
+
+@media all and (max-width: 760px) {
+    .span-info{
+        display:none;
+    }
+
+    .breadcrumb li:last-child{
+        display:block;
+    }
+}
+
+@media all and (max-width: 760px) {
+    .span-info{
+        display:none;
+    }
+
+    .breadcrumb li:last-child{
+        display:block;
+    }
+}
+
+
+@media all and (max-width: 1000px) {
+    .main-menu .brand{
+        display: block;
+    }
+}

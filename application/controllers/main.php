@@ -24,30 +24,30 @@ class Main extends MY_Controller {
 
     public function index() {
 //            $this->data['title'] = 'Inicio';
-//            $this->data['content'] = $this->load->view('tpl/inicio', '', TRUE);
-            $this->load->view('base', $this->data);
+        $this->data['tpl_content'] = $this->load->view('dashboard', '', TRUE);
+        $this->load->view('_base', $this->data);
     }
 
     public function login() {
-        if ($this->auth->is_logged_in()) {
-            redirect('.');
-        } else {
-            $this->form_validation->set_rules('usr', 'Usuario', 'required|callback__check_login');
-            $this->form_validation->set_rules('clv', 'Contraseña', 'required');
-            $this->form_validation->set_rules('grp', 'Grupo', 'required');
-            $data['msj_login'] = '';
-            if ($this->form_validation->run()) {
-                if ($this->auth->login($this->input->post('usr'), $this->input->post('clv'), $this->input->post('grp'))) {
-                    redirect('main');
-                } else {
-                    $data['msj_login'] = 'Correo electrónico y/o contraseña inválido';
-                }
+        $data['script'] = '';
+//        if ($this->auth->is_logged_in()) {
+//            redirect('.');
+//        } else {
+        $this->form_validation->set_rules('email', 'Correo electrónico', 'required');
+        $this->form_validation->set_rules('clv', 'Contraseña', 'required');
+        $this->form_validation->set_rules('grp', 'Grupo', 'required');
+        $data['msj_login'] = '';
+        if ($this->form_validation->run()) {
+            if ($this->auth->login($this->input->post('email'), $this->input->post('clv'), $this->input->post('grp'))) {
+                redirect('main');
+            } else {
+                $data['msj_login'] = 'Correo electrónico y/o contraseña inválido';
             }
-            $data['script'] = '';
-            $this->load->view('login', $data);
         }
+        $this->load->view('login', $data);
+//        }
     }
-    
+
     public function adminlogin() {
         if ($this->auth->is_logged_in()) {
             redirect('.');
