@@ -2,8 +2,7 @@
 $usr = array(
     'id' => 'email',
     'name' => 'email',
-    'class' => 'input-block-level',
-    'autocomplete' => 'off'
+    'class' => 'input-block-level'
 );
 
 $clv = array(
@@ -13,16 +12,12 @@ $clv = array(
     'autocomplete' => 'off'
 );
 
+
 $grp = array(
     'id' => 'grp',
     'name' => 'grp',
     'attr' => 'class="span4"',
-    'options' => array(
-        '' => '',
-        $this->config->item('doc') => 'Docentes',
-        $this->config->item('alu') => 'Alumnos',
-        $this->config->item('rep') => 'Representantes'
-    )
+    'options' => $this->auth->get_groups_for_login()
 );
 
 $submit = array(
@@ -88,7 +83,7 @@ $submit = array(
             <div class="control-group">
                 <label class="control-label" for="inputPassword">Contraseña</label>
                 <div class="controls">
-                    <?php echo form_input($clv) ?>
+                    <?php echo form_password($clv) ?>
                 </div>
             </div>
             <div class="control-group">

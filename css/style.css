@@ -43,8 +43,34 @@ html,body{
     width: 247px;
 }
 
+.banner .data-usuario{
+    border:0px solid red;
+    float:left;
+    text-align: right;
+    margin-right:5px;
+    margin-top:10px;
+}
+
+.banner .data-usuario .usuario-nombre{
+    color:#ffffff;
+    border:0px solid yellow;
+    font-size:16px;
+    line-height: 16px;
+}
+
+.banner .data-usuario .usuario-grupo{
+    color:#aaaaaa;
+    font-size:10px;
+    line-height: 10px;
+}
+
+
 .main-menu .brand{
     display: none;
+}
+
+.main-menu .input-append{
+    margin-bottom:0px;
 }
 
 .navbar .navbar-inner{
@@ -65,33 +91,34 @@ footer {
     margin: 0px;
 }
 
-
-
-
-@media all and (max-width: 760px) {
-    .span-info{
-        display:none;
-    }
-
-    .breadcrumb li:last-child{
-        display:block;
-    }
+.main-title{
+    border-bottom:1px solid #DCDCDC;
+    height:30px;
+    padding:0px 25px 0px 25px;
 }
 
-@media all and (max-width: 760px) {
-    .span-info{
-        display:none;
-    }
-
-    .breadcrumb li:last-child{
-        display:block;
-    }
+.main-title .title{
+    font-size:14px;
+    margin-top:4px;
+    font-weight: bold;
 }
-
 
 @media all and (max-width: 1000px) {
+    .banner .logo{
+        background:url('../img/logo_header.png') no-repeat left;
+        width: 60px;
+    }
+
     .main-menu .brand{
         display: block;
+    }
+
+    #trailbox{
+        display:none;
+    }
+
+    .main-title{
+        margin-top:5px;
     }
 }
 
@@ -108,50 +135,62 @@ footer {
     position: relative;
     right: 0;
 }
-
 #trailbox ul, #breadcrumbtrail li {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    font-weight: bold;
+    font-size:12px;
 }
-
 #breadcrumbtrail {
     float: left;
     height: 26px;
     overflow: hidden;
 }
-
 #breadcrumbtrail li {
     color: #777777;
     float: left;
     line-height: 26px;
     padding-left: 10px;
 }
-
-
-#trailbox2 ul, #breadcrumbtrail li {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
 #breadcrumbtrail li a {
     background: url("../img/bg_breadcrumb.png") no-repeat scroll right center transparent;
     color: #444444;
     display: block;
     padding: 0 15px 0 0;
-    font-size:12px;
-}
-
-#breadcrumbtrail li a:link {
-    color: #4171B5;
-    font-weight: bold;
-    outline: medium none;
     text-decoration: none;
+}
+#breadcrumbtrail li a:hover {
+    color: #4271B5;
+}
+#breadcrumbtrail li a:active {
+    color: #C3CBDE;
+    outline: medium none;
 }
 
 .dropdown-menu-user{
     border-top-right-radius: 0px;
     border:none;
 }
+
+.configuration_form {
+    border: 1px solid #EBEBEB;
+    clear: both;
+    margin: 20px 2px 2px;
+    padding: 10px;
+}
+
+.configuration_form .control-group .control-label{
+    font-weight: bold;
+}
+
+.configuration_form .category {
+    background-color: #FFFFFF;
+    color: #4271B5;
+    font-weight: bold;
+    padding: 0 5px;
+    position: relative;
+    top: -20px;
+}
+
 

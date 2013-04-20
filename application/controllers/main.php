@@ -23,29 +23,31 @@ class Main extends MY_Controller {
     }
 
     public function index() {
-//            $this->data['title'] = 'Inicio';
-        $this->data['tpl_content'] = $this->load->view('dashboard', '', TRUE);
-        $this->load->view('_base', $this->data);
+        $this->auth->logged_in();
+        $data['breadcump'] = array(
+            array('href' => '.', 'name' => 'Inicio')
+        );
+        $this->data['tpl_content'] = $this->load->view('dashboard', $data, TRUE);
+        $this->load->view($this->config->item('tpl_base'), $this->data);
     }
 
     public function login() {
-        $data['script'] = '';
-//        if ($this->auth->is_logged_in()) {
-//            redirect('.');
-//        } else {
-        $this->form_validation->set_rules('email', 'Correo electrónico', 'required');
-        $this->form_validation->set_rules('clv', 'Contraseña', 'required');
-        $this->form_validation->set_rules('grp', 'Grupo', 'required');
-        $data['msj_login'] = '';
-        if ($this->form_validation->run()) {
-            if ($this->auth->login($this->input->post('email'), $this->input->post('clv'), $this->input->post('grp'))) {
-                redirect('main');
-            } else {
-                $data['msj_login'] = 'Correo electrónico y/o contraseña inválido';
+        if ($this->auth->is_logged_in()) {
+            redirect('.');
+        } else {
+            $this->form_validation->set_rules('email', 'Correo electrónico', 'required');
+            $this->form_validation->set_rules('clv', 'Contraseña', 'required');
+            $this->form_validation->set_rules('grp', 'Grupo', 'required');
+            $data['msj_login'] = '';
+            if ($this->form_validation->run()) {
+                if ($this->auth->login($this->input->post('email'), $this->input->post('clv'), $this->input->post('grp'))) {
+                    redirect('main');
+                } else {
+                    $data['msj_login'] = 'Correo electrónico y/o contraseña inválido';
+                }
             }
+            $this->load->view('login', $data);
         }
-        $this->load->view('login', $data);
-//        }
     }
 
     public function adminlogin() {

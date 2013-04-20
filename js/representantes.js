@@ -21,5 +21,4 @@ $(document).ready(function(){
         maxDate:"-18y"
     });
     
-    
 });

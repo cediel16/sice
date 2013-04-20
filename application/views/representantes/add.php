@@ -9,35 +9,40 @@ $cedula = array(
     'id' => 'cedula',
     'name' => 'cedula',
     'value' => $this->input->post('cedula'),
-    'maxlength' => 9
+    'maxlength' => 9,
+    'class' => 'span5'
 );
 
 $primer_nombre = array(
     'id' => 'primer_nombre',
     'name' => 'primer_nombre',
     'value' => $this->input->post('primer_nombre'),
-    'maxlength' => 30
+    'maxlength' => 30,
+    'class' => 'span5'
 );
 
 $segundo_nombre = array(
     'id' => 'segundo_nombre',
     'name' => 'segundo_nombre',
     'value' => $this->input->post('segundo_nombre'),
-    'maxlength' => 30
+    'maxlength' => 30,
+    'class' => 'span5'
 );
 
 $primer_apellido = array(
     'id' => 'primer_apellido',
     'name' => 'primer_apellido',
     'value' => $this->input->post('primer_apellido'),
-    'maxlength' => 30
+    'maxlength' => 30,
+    'class' => 'span5'
 );
 
 $segundo_apellido = array(
     'id' => 'segundo_apellido',
     'name' => 'segundo_apellido',
     'value' => $this->input->post('segundo_apellido'),
-    'maxlength' => 30
+    'maxlength' => 30,
+    'class' => 'span5'
 );
 
 $fecha_nacimiento = array(
@@ -45,7 +50,8 @@ $fecha_nacimiento = array(
     'name' => 'fecha_nacimiento',
     'value' => $this->input->post('fecha_nacimiento'),
     'readonly' => 'readonly',
-    'maxlength' => 30
+    'maxlength' => 30,
+    'class' => 'span5'
 );
 
 $sexo_m = array(
@@ -65,94 +71,157 @@ $sexo_f = array(
 $email = array(
     'id' => 'email',
     'name' => 'email',
-    'value' => $this->input->post('email')
+    'value' => $this->input->post('email'),
+    'class' => 'span5'
 );
 ?>
-<div class="content-header">
-    <div class="title"><?php echo $title ?></div>
-</div>
 
 <div class="conteiner-add-representantes">
-    <div class="bar-side ui-corner-all" style="position:relative;">
-        <div id="foto_perfil" class="profile-picture ui-corner-all" style="background: #D5D5D5 url('<?php echo base_url() ?>img/profile/default2.jpg') no-repeat center;"></div>
-    </div>
-    <div class="sub-content">
-        <?php echo form_open('', 'id="form_representantes_add"') ?>
-        <fieldset>
-            <legend>Datos personales</legend>
-            <table class="table-form" border="0">
-                <tr>
-                    <td valign="top" width="150px"><?php echo form_label('Cédula', $cedula['id']) ?></td>
-                    <td>
-                        <?php echo form_input($cedula) ?>
-                        <?php echo form_error($cedula['name']) ?>
-                    </td>
-                </tr>
-                <tr>
-                    <td valign="top"><?php echo form_label('Primer nombre', $primer_nombre['id']) ?></td>
-                    <td>
-                        <?php echo form_input($primer_nombre) ?>
-                        <?php echo form_error($primer_nombre['name']) ?>
-                    </td>
-                </tr>
-                <tr>
-                    <td valign="top"><?php echo form_label('Segundo nombre', $segundo_nombre['id']) ?></td>
-                    <td>
-                        <?php echo form_input($segundo_nombre) ?>
-                        <?php echo form_error($segundo_nombre['name']) ?>
-                    </td>
-                </tr>
-                <tr>
-                    <td valign="top"><?php echo form_label('Primer apellido', $primer_apellido['id']) ?></td>
-                    <td>
-                        <?php echo form_input($primer_apellido) ?>
-                        <?php echo form_error($primer_apellido['name']) ?>
-                    </td>
-                </tr>
-                <tr>
-                    <td valign="top"><?php echo form_label('Segundo apellido', $segundo_apellido['id']) ?></td>
-                    <td>
-                        <?php echo form_input($segundo_apellido) ?>
-                        <?php echo form_error($segundo_apellido['name']) ?>
-                    </td>
-                </tr>
-                <tr>
-                    <td valign="top"><?php echo form_label('Fecha de nacimiento', $fecha_nacimiento['id']) ?></td>
-                    <td>
-                        <?php echo form_input($fecha_nacimiento) ?>
-                        <?php echo form_error($fecha_nacimiento['name']) ?>
-                    </td>
-                </tr>
-                <tr>
-                    <td valign="top"><?php echo form_label('Sexo', $sexo_m['name']) ?></td>
-                    <td>
 
-                        <?php echo form_radio($sexo_m) . form_label($sexo_m['value'], $sexo_m['id']) ?>
-                        <?php echo form_radio($sexo_f) . form_label($sexo_f['value'], $sexo_f['id']) ?>
-                        <?php echo form_error($sexo_m['name']) ?>
-                    </td>
-                </tr>
-                <tr>
-                    <td valign="top"><?php echo form_label('Correo electónico', $email['id']) ?></td>
-                    <td>
-                        <?php echo form_input($email) ?>
-                        <?php echo form_error($email['name']) ?>
-                    </td>
-                </tr>
-            </table>
-        </fieldset>
-        <?php echo form_close() ?>
+    <div class="configuration_form">
+        <span class="category">Datos básicos</span>
+        <div class="form-horizontal">
+            <div class="control-group">
+                <?php echo form_label('Cédula', $cedula['id'], array('class' => 'control-label')) ?>
+                <div class="controls">
+                    <?php echo form_input($cedula) ?>
+                </div>
+            </div>
+            <div class="control-group">
+                <?php echo form_label('Primer nombre', $primer_nombre['id'], array('class' => 'control-label')) ?>
+                <div class="controls">
+                    <?php echo form_input($primer_nombre) ?>
+                </div>
+            </div>
+            <div class="control-group">
+                <?php echo form_label('Segundo nombre', $segundo_nombre['id'], array('class' => 'control-label')) ?>
+                <div class="controls">
+                    <?php echo form_input($segundo_nombre) ?>
+                </div>
+            </div>
+            <div class="control-group">
+                <?php echo form_label('Primer apellido', $primer_apellido['id'], array('class' => 'control-label')) ?>
+                <div class="controls">
+                    <?php echo form_input($primer_apellido) ?>
+                </div>
+            </div>
+            <div class="control-group">
+                <?php echo form_label('Segundo apellido', $segundo_apellido['id'], array('class' => 'control-label')) ?>
+                <div class="controls">
+                    <?php echo form_input($segundo_apellido) ?>
+                </div>
+            </div>
+            <div class="control-group">
+                <?php echo form_label('Fecha de nacimiento', $fecha_nacimiento['id'], array('class' => 'control-label')) ?>
+                <div class="controls">
+                    <?php echo form_input($fecha_nacimiento) ?>
+                </div>
+            </div>
+            <div class="control-group">
+                <?php echo form_label('Sexo', '', array('class' => 'control-label')) ?>
+                <div class="controls">
+                    <div class="radio">
+                        <?php echo form_radio($sexo_m) ?>
+                        <?php echo form_label($sexo_m['value'], $sexo_m['id']) ?>
+                    </div>
+                    <div class="radio">
+                        <?php echo form_radio($sexo_f) ?>
+                        <?php echo form_label($sexo_f['value'], $sexo_f['id']) ?>
+                    </div>
+                </div>
+            </div>
+            <div class="control-group">
+                <?php echo form_label('Correo electrónico', $email['id'], array('class' => 'control-label')) ?>
+                <div class="controls">
+                    <?php echo form_input($email) ?>
+                </div>
+            </div>
+            <div class="control-group">
+                <div class="controls">
+                    <?php
+                    echo form_button(array(
+                        'id' => 'btn_aceptar_representantes_add',
+                        'name' => 'btn_aceptar_representantes_add',
+                        'value' => 'true',
+                        'content' => 'Aceptar',
+                        'class' => 'btn btn-info'
+                    ));
+                    ?>
+                    <?php echo anchor('representantes', 'Cancelar', 'id="btn_cancelar_representantes_add" class="btn"') ?>
+                </div>
+            </div>
+        </div>
     </div>
+    <!--
+<div class="bar-side ui-corner-all" style="position:relative;">
+    <div id="foto_perfil" class="profile-picture ui-corner-all" style="background: #D5D5D5 url('<?php echo base_url() ?>img/profile/default2.jpg') no-repeat center;"></div>
 </div>
+<div class="sub-content">
+    <?php echo form_open('', 'id="form_representantes_add"') ?>
+    <fieldset>
+        <legend>Datos personales</legend>
+        <table class="table-form" border="0">
+            <tr>
+                <td valign="top" width="150px"><?php echo form_label('Cédula', $cedula['id']) ?></td>
+                <td>
+    <?php echo form_input($cedula) ?>
+    <?php echo form_error($cedula['name']) ?>
+                </td>
+            </tr>
+            <tr>
+                <td valign="top"><?php echo form_label('Primer nombre', $primer_nombre['id']) ?></td>
+                <td>
+    <?php echo form_input($primer_nombre) ?>
+    <?php echo form_error($primer_nombre['name']) ?>
+                </td>
+            </tr>
+            <tr>
+                <td valign="top"><?php echo form_label('Segundo nombre', $segundo_nombre['id']) ?></td>
+                <td>
+    <?php echo form_input($segundo_nombre) ?>
+    <?php echo form_error($segundo_nombre['name']) ?>
+                </td>
+            </tr>
+            <tr>
+                <td valign="top"><?php echo form_label('Primer apellido', $primer_apellido['id']) ?></td>
+                <td>
+    <?php echo form_input($primer_apellido) ?>
+    <?php echo form_error($primer_apellido['name']) ?>
+                </td>
+            </tr>
+            <tr>
+                <td valign="top"><?php echo form_label('Segundo apellido', $segundo_apellido['id']) ?></td>
+                <td>
+    <?php echo form_input($segundo_apellido) ?>
+    <?php echo form_error($segundo_apellido['name']) ?>
+                </td>
+            </tr>
+            <tr>
+                <td valign="top"><?php echo form_label('Fecha de nacimiento', $fecha_nacimiento['id']) ?></td>
+                <td>
+    <?php echo form_input($fecha_nacimiento) ?>
+    <?php echo form_error($fecha_nacimiento['name']) ?>
+                </td>
+            </tr>
+            <tr>
+                <td valign="top"><?php echo form_label('Sexo', $sexo_m['name']) ?></td>
+                <td>
 
-<div class="keypad">
-    <?php echo anchor('representantes', 'Cancelar', 'id="btn_cancelar_representantes_add"') ?>
-    <?php
-    echo form_button(array(
-        'id' => 'btn_aceptar_representantes_add',
-        'name' => 'btn_aceptar_representantes_add',
-        'value' => 'true',
-        'content' => 'Aceptar'
-    ));
-    ?>
+    <?php echo form_radio($sexo_m) . form_label($sexo_m['value'], $sexo_m['id']) ?>
+    <?php echo form_radio($sexo_f) . form_label($sexo_f['value'], $sexo_f['id']) ?>
+    <?php echo form_error($sexo_m['name']) ?>
+                </td>
+            </tr>
+            <tr>
+                <td valign="top"><?php echo form_label('Correo electónico', $email['id']) ?></td>
+                <td>
+    <?php echo form_input($email) ?>
+    <?php echo form_error($email['name']) ?>
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+    <?php echo form_close() ?>
+</div>
+    -->
 </div>

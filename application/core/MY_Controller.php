@@ -9,13 +9,14 @@ class MY_Controller extends CI_Controller {
 
     function __construct() {
         parent::__construct();
-        $this->auth->set_userdata();
+        $this->load->config('common');
+//        $this->auth->set_userdata();
         $this->data = array(
             'tpl_menu' => $this->load->view('menu', '', TRUE),
             'tpl_content' => '',
             'script' => '',
-            'title' => 'title undefined',
-            'submenu' => '',
+            'title' => '',
+            'submenu' => Array(),
             'username' => $this->session->userdata("usuario")
         );
     }

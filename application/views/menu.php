@@ -8,7 +8,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="#" class="brand">SICE</a>
+                    <a href="#" class="brand">SICE</a>
                 <div class="nav-collapse collapse" style="height: 0px;">
                     <ul class="nav">
                         <li><?php echo anchor('.', 'Inicio') ?></li>
@@ -26,6 +26,12 @@
                             </ul>
                         </li>
                     </ul>
+                    <form class="navbar-form pull-right">
+                        <div class="input-append">
+                            <input class="span2" placeholder="Buscar..." type="text">
+                            <button class="btn" type="button"><i class="icon-search"></i></button>
+                        </div>
+                    </form>
                 </div><!--/.nav-collapse -->
             </div>
         </div>

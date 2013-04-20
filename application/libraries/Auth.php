@@ -13,27 +13,25 @@ class Auth {
     }
 
     function login($usr, $clv, $grp) {
-        switch ($grp) {
-            //case $this->CI->config->item('doc'):
-            //case $this->CI->config->item('alu'):
-            case $this->CI->config->item('rep'): {
-                    $this->CI->db->select("
-                    id,
-                    primer_nombre || ' ' || primer_apellido as nombre,
-                    status
+        $table = $this->get_table_by_group_id($grp);
+        $this->CI->db->select("
+                    $table.id,
+                    $table.primer_nombre || ' ' || $table.primer_apellido as nombre,
+                    grupos.grupo,
+                    $table.status
                 ");
-                    $this->CI->db->from($grp);
-                    $this->CI->db->where('email', $usr);
-                    $this->CI->db->where('clave', md5($clv));
-                    $rst = $this->CI->db->get();
-                    if ($rst->num_rows == 1) {
-                        $this->CI->session->set_userdata($rst->row_array());
-                        return TRUE;
-                    } else {
-                        return FALSE;
-                    }
-                }
-            default : return FALSE;
+        $this->CI->db->from($table);
+        $this->CI->db->join('grupos', 'grupos.id=' . $table . '.grupo_fkey', 'inner');
+        $this->CI->db->where('email', $usr);
+        $this->CI->db->where('clave', md5($clv));
+        $this->CI->db->where($table . '.status', $this->CI->config->item('status_active'));
+
+        $rst = $this->CI->db->get();
+        if ($rst->num_rows == 1) {
+            $this->CI->session->set_userdata($rst->row_array());
+            return TRUE;
+        } else {
+            return FALSE;
         }
     }
 
@@ -59,6 +57,12 @@ class Auth {
 
     function is_logged_in($status = 'activo') {
         return $this->CI->session->userdata('status') === ($status ? $this->CI->config->item('status_active') : $this->CI->config->item('status_inactive'));
+    }
+
+    function logged_in() {
+        if (!$this->is_logged_in()) {
+            redirect('main/login');
+        }
     }
 
     function is_access_module($module = '') {
@@ -105,18 +109,37 @@ class Auth {
     }
 
     function logout() {
-        //$this->delete_autologin();
-        // See http://codeigniter.com/forums/viewreply/662369/ as the reason for the next line
+//$this->delete_autologin();
+// See http://codeigniter.com/forums/viewreply/662369/ as the reason for the next line
         $this->CI->session->set_userdata(array('id' => '', 'usuario' => '', 'status' => ''));
         $this->CI->session->sess_destroy();
         redirect('.');
+    }
+
+    function get_groups_for_login() {
+        $this->CI->db->select("id,grupo");
+        $this->CI->db->from('grupos');
+        $rst = $this->CI->db->get();
+        $r = Array('' => '...');
+        foreach ($rst->result() as $row) {
+            $r[$row->id] = $row->grupo;
+        }
+        return $r;
+    }
+
+    function get_table_by_group_id($grp_id) {
+        $this->CI->db->select("tabla");
+        $this->CI->db->from('grupos');
+        $this->CI->db->where('id', $grp_id);
+        $rst = $this->CI->db->get();
+        return $rst->row()->tabla;
     }
 
 }
 
 // END Auth class
 
-    /* End of file Auth.php */
-    /* Location: ./application/libraries/Auth.php */
+/* End of file Auth.php */
+/* Location: ./application/libraries/Auth.php */
 
     

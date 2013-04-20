@@ -12,18 +12,35 @@ class Representantes extends MY_Controller {
     }
 
     public function index() {
-        $data['rows'] = $this->Representantes_model->list_rows($this->input->post('buscar'));
-        $data['message'] = ($this->session->flashdata('message') == '') ? '' : $this->session->flashdata('message');
-
-        $data['title'] = anchor('representantes', 'Representantes');
-        $data['sub_menu'] = array(
-            anchor('representantes/add', 'Nuevo representante')
+        /*
+          $data['message'] = ($this->session->flashdata('message') == '') ? '' : $this->session->flashdata('message');
+         */
+        $this->auth->logged_in();
+        $data['breadcump'] = array(
+            array('href' => 'representantes', 'name' => 'Representantes')
         );
-        $this->data['content'] = $this->load->view('representantes/index', $data, TRUE);
-        $this->load->view('tpl/main', $this->data);
+        $this->data['title'] = 'Representantes';
+        $this->data['submenu'] = array(
+            array('href'=>'representantes/add','name'=>'Añadir representante')
+        );
+        $data['rows'] = $this->Representantes_model->list_rows($this->input->post('buscar'));
+        $this->data['tpl_content'] = $this->load->view('representantes/index', $data, TRUE);
+        $this->load->view($this->config->item('tpl_base'), $this->data);
     }
 
     public function add() {
+        $this->auth->logged_in();
+        $data['breadcump'] = array(
+            array('href' => 'representantes', 'name' => 'Representantes'),
+            array('href' => 'representantes/add', 'name' => 'Añadir representante')
+        );
+        $this->data['title'] ='Añadir Representante';
+        
+        $this->data['tpl_content'] = $this->load->view('representantes/add', $data, TRUE);
+        $this->load->view('base', $this->data);
+    }
+
+    public function _add() {
         if (!$this->auth->is_logged_in()) {
             redirect('main/login');
         } elseif (!$this->auth->is_access_permission('representantes:registrar representante')) {
